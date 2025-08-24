@@ -100,15 +100,45 @@
 				</div>
 			</div>
 		</div>
-		<div class="row message">
-			<div class="col-md-12">
-				<p>Today is special...</p>
-				<p> Today is 24th August, My gurl's birthday</p>
-				<p><strong>Happiest Birthday Baby 💕</strong></p>
-				<p>May this year bring you endless happiness, sucess, laughter, and all the love you deserve</p>
-				<p>I hope your day is filled with smiles, cake, and maybe a little bit of me stuck in your thoughts 😉</p>
-			</div>
-		</div>
+
+
+        <div class="row message">
+  <div class="col-md-12">
+    <p class="birthday-text">Today is special...</p>
+    <p class="birthday-text">Today is 24th August, My gurl’s birthday 🎉</p>
+    <p class="birthday-text"><strong>Happiest Birthday Baby ✔️</strong></p>
+    <p class="birthday-text">May this year bring you endless happiness, success, laughter, and all the love you deserve</p>
+    <p class="birthday-text">I hope your day is filled with smiles, cake, and maybe a little bit of me stuck in your thoughts 😉</p>
+  </div>
+</div>
+
+<script>
+  const texts = document.querySelectorAll(".birthday-text");
+  let index = 0;
+
+  // Hide all texts initially
+  texts.forEach(t => t.style.display = "none");
+
+  function showNextText() {
+    if (index > 0) {
+      texts[index - 1].style.display = "none"; // hide previous
+    }
+    if (index < texts.length) {
+      texts[index].style.display = "block"; // show current
+      index++;
+      setTimeout(showNextText, 5000); // change every 3 seconds
+    }
+  }
+
+  // Start sequence
+  showNextText();
+</script>
+
+
+
+
+		
+		
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
